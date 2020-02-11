@@ -20,7 +20,7 @@ create: stop
 		--dns=127.0.0.1,1.1.1.1 \
 		-e ServerIP="192.168.1.3" \
 		-e TZ="Europe/Stockholm" \
-		-e WEBPASSWORD="$$(pass $(name))" \
+		-e WEBPASSWORD="$(password)" \
 		-v "pihole:/etc/pihole/" \
 		-v "dnsmasq:/etc/dnsmasq.d/" \
 		docker.io/pihole/pihole
