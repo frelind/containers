@@ -1,0 +1,8 @@
+[Unit]
+Description=%N container
+[Service]
+Restart=on-failure
+ExecStart=/usr/bin/podman start -a %N
+ExecStop=/usr/bin/podman stop -t 20 %N
+[Install]
+WantedBy=multi-user.target
