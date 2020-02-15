@@ -22,6 +22,6 @@ create: stop
 		jacobalberty/unifi:stable
 
 service:
-	install $(name).service /etc/systemd/system/
+	install ../systemd-tmpl.service /etc/systemd/system/$(name).service
 	systemctl daemon-reload
 	systemctl enable $(name)

@@ -26,6 +26,6 @@ create: stop
 		docker.io/pihole/pihole
 
 service:
-	install $(name).service /etc/systemd/system/
+	install ../systemd-tmpl.service /etc/systemd/system/$(name).service
 	systemctl daemon-reload
 	systemctl enable $(name)
